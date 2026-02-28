@@ -2872,3 +2872,281 @@ E. Template Specific Elements
         left: 2.5rem;
     }
 }
+/***********************************************************************************************************************
+CUSTOM IMPROVEMENTS - Winston Portfolio
+***********************************************************************************************************************/
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced gradient background */
+body {
+    background: linear-gradient(135deg, #020312 0%, #1a0e2e 25%, #2d1654 50%, #1a0e2e 75%, #020312 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(242, 108, 79, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(125, 113, 112, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Improved buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #f26c4f 0%, #d44729 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(242, 108, 79, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 108, 79, 0.4);
+    background: linear-gradient(135deg, #d44729 0%, #f26c4f 100%);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced cards and items */
+.ts-item {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ts-item:hover {
+    transform: translateY(-5px);
+}
+
+.ts-item-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ts-item:hover .ts-item-content {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(242, 108, 79, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery improvements */
+.ts-gallery__item {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ts-gallery__item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(242, 108, 79, 0.3);
+}
+
+.ts-gallery__image img {
+    transition: transform 0.4s ease;
+}
+
+.ts-gallery__item:hover .ts-gallery__image img {
+    transform: scale(1.1);
+}
+
+/* Progress bars enhancement */
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #f26c4f 0%, #d44729 100%);
+    box-shadow: 0 2px 10px rgba(242, 108, 79, 0.5);
+    transition: width 1.5s ease-in-out;
+}
+
+/* Social icons enhancement */
+.ts-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ts-social-icons a:hover {
+    background: linear-gradient(135deg, #f26c4f 0%, #d44729 100%);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(242, 108, 79, 0.4);
+}
+
+/* Form improvements */
+.form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #f26c4f;
+    box-shadow: 0 0 0 0.2rem rgba(242, 108, 79, 0.25);
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navbar enhancement */
+.navbar {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.bg-white {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #f26c4f;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Links in description lists */
+dl a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+dl a:hover {
+    color: #f26c4f !important;
+    border-bottom-color: #f26c4f;
+}
+
+/* Scroll to top button */
+.ts-scroll[href="#page-top"] {
+    transition: all 0.3s ease;
+}
+
+.ts-scroll[href="#page-top"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Better section spacing */
+section {
+    position: relative;
+}
+
+.ts-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.ts-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #f26c4f, transparent);
+    transform: translateX(-50%);
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    h1, .ts-h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .ts-h2 {
+        font-size: 1.5rem;
+    }
+    
+    .ts-item-content {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .ts-social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading animation improvement */
+.has-loading-screen {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.has-loading-screen.loading-done {
+    opacity: 1;
+}
+
+/* Partner logos hover effect */
+.partner-logo img {
+    filter: grayscale(100%) brightness(0.8);
+    transition: all 0.3s ease;
+    max-width: 100px;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.1);
+}

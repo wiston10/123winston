@@ -1,0 +1,9 @@
+# Sitemap
+User-agent: *
+Allow: /
+
+# Disallow admin or private sections
+Disallow: /assets/php/
+
+# Sitemap location (create sitemap.xml if needed)
+Sitemap: https://yourwebsite.com/sitemap.xml
