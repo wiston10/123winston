@@ -3,6 +3,7 @@ mb_internal_encoding("UTF-8");
 
 $to = 'wfernandonavarroa@gmail.com';
 $subject = '';
+$body = '';
 
 $name = "";
 $email = "";
